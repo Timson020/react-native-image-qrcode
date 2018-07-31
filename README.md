@@ -1,4 +1,10 @@
+
+![npm](https://img.shields.io/npm/v/react-native-image-qrcode.svg)
+![npm](https://img.shields.io/npm/dw/react-native-image-qrcode.svg)
+![GitHub issues](https://img.shields.io/github/issues/Timson020/react-native-image-qrcode.svg)
+
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Timson020/react-native-image-qrcode.git/pulls)
+![npm](https://img.shields.io/npm/l/react-native-image-qrcode.svg)
 
 # react-native-image-qrcode
 
