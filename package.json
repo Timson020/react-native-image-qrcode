@@ -1,0 +1,43 @@
+{
+	"name": "react-native-image-qrcode",
+	"version": "0.0.1",
+	"description": "react-native render qrocode",
+	"main": "index.js",
+	"private": false,
+	"author": "Timson020 <a_sa_f@126.com>",
+	"license": "MIT",
+	"homepage": "https://github.com/Timson020/react-native-image-qrcode#readme",
+	"engines": {
+		"node": ">=8.11.3"
+	},
+	"scripts": {},
+	"peerDependencies": {
+		"react": "*",
+		"react-native": ">= 0.50.0"
+	},
+	"dependencies": {
+		"qr.js": "^0.0.0",
+    "prop-types": "^15.6.2"
+  },
+	"devDependencies": {
+		"babel-eslint": "^8.2.6",
+		"babel-preset-react-native": "^5.0.2",
+		"eslint": "^5.2.0",
+		"eslint-config-airbnb": "^17.0.0",
+		"eslint-plugin-import": "^2.13.0",
+		"eslint-plugin-jsx-a11y": "^6.1.1",
+		"eslint-plugin-react": "^7.10.0",
+		"eslint-plugin-react-native": "^3.2.1"
+	},
+	"keywords": [
+		"react-native",
+		"qrcode"
+	],
+	"bugs": {
+		"url": "https://github.com/Timson020/react-native-image-qrcode/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Timson020/react-native-image-qrcode.git"
+	}
+}
