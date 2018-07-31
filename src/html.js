@@ -1,3 +1,5 @@
+import { imgOnLoad } from './module'
+
 function renderHtml (render, context) {
 	const htmlString = `
 		<!DOCTYPE html>
@@ -33,8 +35,14 @@ function renderHtml (render, context) {
 			<canvas id="qrcode"></canvas>
 			<script type="text/javascript">
 				var qrcode = document.getElementById('qrcode')
+				var img = new Image()
+				var context = ${JSON.stringify(context)}
+
+				img.onload = ${imgOnLoad.toString()}
+
+				img.src = context.imgUrl
 				try {
-					(${render}).call(${context}, qrcode)
+					(${render}).call(context, qrcode)
 				} catch (err) {
 					alert(err)
 				}

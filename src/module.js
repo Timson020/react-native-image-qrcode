@@ -20,17 +20,18 @@ export function utf16to8(str) {
 
 export function renderCanvas(canvas) {
 	const { size, fgColor, bgColor, cells } = this
+	const sizeDuo = size * 2
 	const ctx = canvas.getContext('2d')
-	canvas.width = size
-	canvas.height = size
+	canvas.width = sizeDuo
+	canvas.height = sizeDuo
 
 	canvas.style.width = `${size}px`
 	canvas.style.height = `${size}px`
 	
-	ctx.fillRect(0, 0, size, size)
+	ctx.fillRect(0, 0, sizeDuo, sizeDuo)
 	
-	const cellWidth = size / cells.length
-	const cellHeight = size / cells.length
+	const cellWidth = sizeDuo / cells.length
+	const cellHeight = sizeDuo / cells.length
 	const nRoundedWidth = Math.round(cellWidth)
 	const nRoundedHeight = Math.round(cellHeight)
 	cells.forEach((row, rowIndex) => {
@@ -44,4 +45,19 @@ export function renderCanvas(canvas) {
 			ctx.strokeRect( Math.ceil(nLeft) - 0.5, Math.ceil(nTop) - 0.5, nRoundedWidth, nRoundedHeight)
 		})
 	})
+}
+
+export function imgOnLoad() {
+	try {
+		const { width, height } = this
+		const percentage = width / height
+		const containerSize = qrcode.width
+		const imgW = containerSize * 0.4 * ( width > height ?  1 : percentage )
+		const imgH = containerSize * 0.4 * (width > height ? (1 / percentage) : 1)
+		const ctx = qrcode.getContext('2d')
+
+		ctx.drawImage(this, (containerSize - imgW) / 2, (containerSize - imgH) / 2, imgW, imgH)
+	} catch (err) {
+		alert(err)
+	}
 }

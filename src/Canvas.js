@@ -21,7 +21,7 @@ export default class Canvas extends Component {
 		fgColor: 'white',
 		bgColor: 'black',
 		size: 150,
-		imgUrl: 'https://avatars3.githubusercontent.com/u/10054336?s=460&v=4',
+		imgUrl: '',
 	};
 
 	constructor(props) {
@@ -36,7 +36,7 @@ export default class Canvas extends Component {
 		
 		const str = this._utf16to8(value)
 
-		const context = JSON.stringify({ size, value, bgColor, fgColor, imgUrl, cells: qr(str).modules })
+		const context = { size, value, bgColor, fgColor, imgUrl, cells: qr(str).modules }
 		
 		const renderMethod = renderCanvas.toString()
 		
