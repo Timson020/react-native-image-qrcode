@@ -11,7 +11,7 @@
 		"node": ">=8.11.3"
 	},
 	"scripts": {
-		"test": "./index.js",
+		"test": "./index.js"
 	},
 	"peerDependencies": {
 		"react": "*",
