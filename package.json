@@ -10,7 +10,9 @@
 	"engines": {
 		"node": ">=8.11.3"
 	},
-	"scripts": {},
+	"scripts": {
+		"test": "./index.js",
+	},
 	"peerDependencies": {
 		"react": "*",
 		"react-native": ">= 0.50.0"

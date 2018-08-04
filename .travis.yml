@@ -1,0 +1,18 @@
+language: node_js
+
+node_js: 
+	- "node"
+	- "9"
+
+before_install:
+	- npm install react-native-cli -g
+
+before_script:
+	- npm install react react-native
+	- npm install
+
+cache:
+	directories:
+		- "node_modules"
+
+script: test
