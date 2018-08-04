@@ -11,7 +11,7 @@
 		"node": ">=8.11.3"
 	},
 	"scripts": {
-		"test": "babel-node ./index.js"
+		"test": "jest"
 	},
 	"peerDependencies": {
 		"react": "*",
