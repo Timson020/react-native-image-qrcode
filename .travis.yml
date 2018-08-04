@@ -12,9 +12,5 @@ before_install:
 before_script:
   - "npm install react react-native babel-core"
 
-cache:
-  directories:
-    - "node_modules"
-
 script:
   - "npm run test"
