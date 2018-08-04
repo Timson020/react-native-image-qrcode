@@ -2,14 +2,16 @@ language: node_js
 
 node_js: 
 	- "node"
+	- "10"
 	- "9"
+	- "8"
 
 before_install:
-	- npm install react-native-cli -g
+	- "npm install react-native-cli -g"
 
 before_script:
-	- npm install react react-native
-	- npm install
+	- "npm install react react-native"
+	- "npm install"
 
 cache:
 	directories:
