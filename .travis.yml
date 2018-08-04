@@ -10,7 +10,7 @@ before_install:
   - "npm install babel-cli react-native-cli -g"
 
 before_script:
-  - "npm install react react-native babel-core"
+  - "npm install react react-native jest babel-core babel-jest"
 
 script:
   - "npm run test"
