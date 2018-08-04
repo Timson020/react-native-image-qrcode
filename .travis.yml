@@ -17,4 +17,5 @@ cache:
   directories:
     - "node_modules"
 
-script: test
+script:
+	- "npm run test"
