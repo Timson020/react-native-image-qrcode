@@ -14,6 +14,7 @@ export default class Canvas extends Component {
 		bgColor: PropTypes.string,
 		fgColor: PropTypes.string,
 		imgUrl: PropTypes.string,
+		imgSize: PropTypes.number,
 	};
 
 	static defaultProps = {
@@ -22,6 +23,7 @@ export default class Canvas extends Component {
 		bgColor: 'black',
 		size: 150,
 		imgUrl: '',
+		imgSize: 0.4,
 	};
 
 	constructor(props) {
@@ -32,11 +34,11 @@ export default class Canvas extends Component {
 	}
 
 	render() {
-		const { value, size, fgColor, bgColor, imgUrl } = this.props
+		const { value, size, fgColor, bgColor, imgUrl, imgSize } = this.props
 		
 		const str = this._utf16to8(value)
 
-		const context = { size, value, bgColor, fgColor, imgUrl, cells: qr(str).modules }
+		const context = { value, size, fgColor, bgColor, imgUrl, imgSize, cells: qr(str).modules }
 		
 		const renderMethod = renderCanvas.toString()
 		

@@ -52,10 +52,10 @@ export function imgOnLoad() {
 		const { width, height } = this
 		const percentage = width / height
 		const containerSize = qrcode.width
-		const imgW = containerSize * 0.4 * ( width > height ?  1 : percentage )
-		const imgH = containerSize * 0.4 * (width > height ? (1 / percentage) : 1)
+		const imgW = containerSize * context.imgSize * ( width > height ?  1 : percentage )
+		const imgH = containerSize * context.imgSize * (width > height ? (1 / percentage) : 1)
 		const ctx = qrcode.getContext('2d')
-
+		if (context.imgSize >= 1) return throw new Error('imageSize is to big')
 		ctx.drawImage(this, (containerSize - imgW) / 2, (containerSize - imgH) / 2, imgW, imgH)
 	} catch (err) {
 		alert(err)

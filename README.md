@@ -8,20 +8,30 @@
 
 # react-native-image-qrcode
 
+## Feature
+
+- bar-code
+- qr-code container-style
+- qr-code-inside-image-container-style
+
 ## Support
+
+- [X] IOS && Android
 - [X] render the qrcode
 - [X] add the img
-- [ ] size the img size
+- [X] size the img size
 
 ## Props
 
 |Name|Default|Type|Description|
 |:--:|:--:|:--:|:--:|
-|__size__|150|__number__|qrcode size|
-|__value__| 'https://github.com/Timson020/' |__string__|qrcode value|
-|__bgColor__|'black'|__string__|qrcode color|
-|__fgColor__|'white'|__string__|qrcode background-color|
-|__imgUrl__|''|__string__|img-url to set in qrcode center|
+|__size__|150|__number__||
+|__value__| https://github.com/Timson020/ |__string__|string value|
+|__bgColor__|black|__string__|color|
+|__fgColor__|white|__string__|color|
+|__imgUrl__|''|__string__|url string|
+|__imgSize__|0.4|__number__|percentage, don't bigger than 1|
+
 
 ## Install
 
